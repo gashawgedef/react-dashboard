@@ -1,5 +1,5 @@
-import Logo from '../Components/Logo'
-import NavBar from '../Components/NavBar'
+// import Logo from '../Components/Logo'
+// import NavBar from '../Components/NavBar'
 import '../Pages/Home.css'
 import styled from 'styled-components'
 
@@ -76,10 +76,10 @@ const INPUT_OUTER_DIV = styled.div`
 function HomePage() {
     return (
         <>
-            <div className='home-page-nav-container'>
+            {/* <div className='home-page-nav-container'>
                 <Logo />
                 <NavBar />
-            </div>
+            </div> */}
             <H1>Welcome to This Form</H1>
             <INPUT placeholder='ENTER NAME' />
             <BUTTON onClick={() => alert("This is Check in")}>Check In</BUTTON>
