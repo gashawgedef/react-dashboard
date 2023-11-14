@@ -6,10 +6,13 @@ function NavBar() {
     <nav className="navbar">
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/home">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/">Dashboard</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contacts">Contact</NavLink>
         </li>
         <li>
           <NavLink to="/login" >
