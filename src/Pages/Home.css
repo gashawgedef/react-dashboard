@@ -1,0 +1,16 @@
+
+
+.home-page-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-page-nav-container ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.home-page-nav-container li{
+    padding: 3rem;
+}
