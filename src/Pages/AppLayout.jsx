@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import Header from "../ui/Header"
 import Sidebar from "../ui/Sidebar"
+import Footer from "../ui/Footer"
 import styled from "styled-components"
 
 
@@ -13,8 +14,9 @@ height:100vh ;
 `
 
 const MAIN=styled.main`
- background-color:var(--color-grey-5);
+ background-color:goldenrod;
  padding:4rem 4.8rem 6.4rem;
+ height: 100%;
 `
 
 
@@ -26,7 +28,7 @@ function AppLayout() {
       <MAIN>
       <Outlet />
       </MAIN>
-     
+     <Footer/>
     </StyledDiv>
   )
 }
