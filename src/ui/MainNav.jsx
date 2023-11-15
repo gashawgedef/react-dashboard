@@ -63,12 +63,9 @@ function MainNav() {
         <li><StyledNavLink to="/setting"><HiCog8Tooth/>Settings</StyledNavLink></li>
         <li><StyledNavLink to="/users"><HiMiniUsers />Users</StyledNavLink> </li>
         <li><StyledNavLink to="/contacts"><HiMiniEnvelope />Contact</StyledNavLink> </li>
-        <li><StyledNavLink to="/setting"><HiMiniUsers/>Members</StyledNavLink> </li>
-         <li><StyledNavLink to="/users"><HiMiniUsers />Users</StyledNavLink> </li>
-        <li><StyledNavLink to="/contacts"><HiMiniEnvelope />Contact</StyledNavLink> </li>
-        <li><StyledNavLink to="/setting"><HiMiniUsers/>Members</StyledNavLink> </li>
-        
-        
+        <li><StyledNavLink to="/cabins"><HiMiniUsers />Cabins</StyledNavLink> </li>
+        <li><StyledNavLink to="/bookings"><HiMiniEnvelope />Bookings</StyledNavLink> </li>
+        <li><StyledNavLink to="/guests"><HiMiniUsers/>Guests</StyledNavLink> </li>
       </NavList>
     
   )
