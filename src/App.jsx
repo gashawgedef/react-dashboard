@@ -9,6 +9,9 @@ import AppLayout from './Pages/AppLayout'
 import GlobalStyles from "./styles/GlobalStyles";
 import Contact from "./Pages/Contact";
 import PageNotFound from "./Pages/PageNotFound";
+import Booking from "./Pages/Bookings/Booking";
+import Cabin from "./Pages/Cabins/Cabin";
+import Guest from "./Pages/Guests/Guest";
 function App() {
   return (
     <>
@@ -22,6 +25,9 @@ function App() {
             <Route path="contacts" element={<Contact />} />
             <Route path="setting" element={<Settings />} />
             <Route path="users" element={<Users />} />
+            <Route path="cabins" element={<Cabin />} />
+            <Route path="bookings" element={<Booking />} />
+            <Route path="guests" element={<Guest />} />
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="*" element={<PageNotFound />} />
