@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import { HiHome   } from "react-icons/hi2";
 import { HiCog8Tooth   } from "react-icons/hi2";
 import { HiMiniUsers   } from "react-icons/hi2";
@@ -12,7 +13,7 @@ const NavList = styled.ul`
   gap: 0.8rem;
 `;
 
-const Link = styled.a`
+const StyledNavLink = styled(NavLink)`
   &:link,
   &:visited {
     display: flex;
@@ -53,15 +54,18 @@ const Link = styled.a`
 
 
 
+
 function MainNav() {
   return (
       <NavList>
-        <li> <Link href="/dashboard"><HiMiniWindow />Dashboard</Link> </li>
-        <li> <Link href="/home"><HiHome/>Home</Link> </li>
-        <li><Link href="/setting"><HiCog8Tooth/>Settings</Link></li>
-        <li>  <Link href="/users"><HiMiniUsers />Users</Link> </li>
-        <li> <Link href="/contacts"><HiMiniEnvelope />Contact</Link> </li>
-        <li> <Link href="/setting"><HiMiniUsers/>Members</Link>   </li>
+        <li><StyledNavLink to="/dashboard"><HiMiniWindow />Dashboard</StyledNavLink> </li>
+        <li><StyledNavLink to="/home"><HiHome/>Home</StyledNavLink> </li>
+        <li><StyledNavLink to="/setting"><HiCog8Tooth/>Settings</StyledNavLink></li>
+        <li><StyledNavLink to="/users"><HiMiniUsers />Users</StyledNavLink> </li>
+        <li><StyledNavLink to="/contacts"><HiMiniEnvelope />Contact</StyledNavLink> </li>
+        <li><StyledNavLink to="/setting"><HiMiniUsers/>Members</StyledNavLink> </li>
+        
+        
       </NavList>
     
   )
