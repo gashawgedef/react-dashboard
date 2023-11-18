@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import {useMutation, useQueryClient } from "@tanstack/react-query";
 import Input from "../../ui/Input";    
 import Form from "../../ui/Form";
 import Button from "../../ui/Button";
@@ -8,7 +8,7 @@ import Textarea from "../../ui/Textarea";
 import { useForm } from "react-hook-form";
 import { createCabins } from "../../services/apiCabins";
 import toast from "react-hot-toast";
-import {useMutation, useQueryClient } from "@tanstack/react-query";
+
 
 const FormRow = styled.div`
   display: grid;
@@ -46,8 +46,18 @@ const Label = styled.label`
 //   color: var(--color-red-700);
 // `;
 
-function CreateCabinForm() {
-  const { handleSubmit, register, errors ,reset} = useForm();
+function CreateCabinForm({cabinToEdit={}}) {
+
+  const {id:editedId, ...editedValues}=cabinToEdit;  
+  const isEditSession=Boolean(editedId);
+
+
+  const { handleSubmit, register, errors ,reset,getValues,formState} = useForm({
+    defaultValues:isEditSession?editedValues:{},
+  });
+
+
+
   const queryClient=useQueryClient();
   const {mutate,isLoading:isCreating}=useMutation({
     mutationFn:createCabins,
