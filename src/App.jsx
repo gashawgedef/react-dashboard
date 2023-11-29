@@ -12,7 +12,11 @@ import PageNotFound from "./Pages/PageNotFound";
 import Booking from "./Pages/Bookings/Booking";
 import Cabin from "./Pages/Cabins/Cabin";
 import Guest from "./Pages/Guests/Guest";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from '@tanstack/react-query'
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Toaster } from "react-hot-toast";
 
